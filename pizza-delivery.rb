@@ -1,8 +1,10 @@
 #delivery - continous loop to help the customer
 require_relative "menu.rb"
+require_relative "order.rb"
+
 
 menu = Menu.new
-
+order = Order.new
 done = false
 
 # welcome message
@@ -20,6 +22,8 @@ while not done
   when 1
     puts "Let me show you the menu"
     menu.print_menu
+    pizza = menu.make_choice
+    order.add_pizza(pizza)
   when 2
     done = true
   else

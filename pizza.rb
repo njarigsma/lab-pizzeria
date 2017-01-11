@@ -1,6 +1,6 @@
 
 # a pizza
-class pizza
+class Pizza
   attr_accessor :number, :name, :ingredients, :price
 
   def initialize(number, name, ingredients, price)

@@ -1,4 +1,7 @@
 #delivery - continous loop to help the customer
+require_relative "menu.rb"
+
+menu = Menu.new
 
 done = false
 
@@ -16,6 +19,7 @@ while not done
   case choice
   when 1
     puts "Let me show you the menu"
+    menu.print_menu
   when 2
     done = true
   else

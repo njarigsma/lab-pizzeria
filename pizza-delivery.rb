@@ -13,8 +13,9 @@ puts "Hello, welcome to our pizzeria!"
 # this will run until done is set to true
 while not done
   puts "What can I do for you?"
-  puts "1: order a pizza"
+  puts "1: order a(nother) pizza"
   puts "2: nothing"
+  puts "3: Check out (EURO #{order.value})" if order.value > 0
   puts "-----------------"
 # get input
   choice = gets.chomp.to_i
